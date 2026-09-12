@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F57A16" />
+      <stop offset="100%" stop-color="#FF9933" />
+    </linearGradient>
+    <linearGradient id="gradTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#087D70" />
+      <stop offset="100%" stop-color="#159447" />
+    </linearGradient>
+    <linearGradient id="gradNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#073F68" />
+      <stop offset="100%" stop-color="#1769D2" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#073F68" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Graphic Emblem / Insignia (Left) -->
+  <g transform="translate(15, 10)" filter="url(#subtleShadow)">
+    <!-- Outer concentric ring -->
+    <circle cx="50" cy="50" r="44" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <circle cx="50" cy="50" r="39" fill="none" stroke="#073F68" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.4"/>
+    
+    <!-- Dynamic orbital arcs connecting Citizen, AI, Govt, College, Industry -->
+    <!-- Top saffron arc -->
+    <path d="M 22 36 A 35 35 0 0 1 78 36" fill="none" stroke="url(#gradOrange)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Bottom green arc -->
+    <path d="M 78 64 A 35 35 0 0 1 22 64" fill="none" stroke="url(#gradTeal)" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Central Innovation Core / Ashoka 12-Spoke Innovation Hub -->
+    <circle cx="50" cy="50" r="14" fill="#073F68"/>
+    <circle cx="50" cy="50" r="8" fill="#ffffff"/>
+    <circle cx="50" cy="50" r="4" fill="#F57A16"/>
+    
+    <!-- Interconnecting Nodes -->
+    <!-- Citizen Node (Top Left) -->
+    <circle cx="22" cy="36" r="6" fill="#F57A16" stroke="#ffffff" stroke-width="2"/>
+    <!-- AI / Govt Node (Top Right) -->
+    <circle cx="78" cy="36" r="6" fill="#1769D2" stroke="#ffffff" stroke-width="2"/>
+    <!-- College / Students (Bottom Right) -->
+    <circle cx="78" cy="64" r="6" fill="#6542B6" stroke="#ffffff" stroke-width="2"/>
+    <!-- Industry / Solution (Bottom Left) -->
+    <circle cx="22" cy="64" r="6" fill="#159447" stroke="#ffffff" stroke-width="2"/>
+    <!-- Sprout / Growth leaf center top -->
+    <path d="M 50 20 C 47 13, 50 8, 50 8 C 50 8, 53 13, 50 20 Z" fill="#159447"/>
+  </g>
+
+  <!-- Typography Lockup -->
+  <!-- Hindi Devanagari Header -->
+  <text x="135" y="44" font-family="'Tiro Devanagari Hindi', 'Rozha One', 'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="29" font-weight="700" fill="#F57A16" letter-spacing="1.5">
+    समाधान
+  </text>
+  
+  <!-- English Primary Brand Name -->
+  <text x="135" y="78" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#073F68" letter-spacing="2.5">
+    SAMADHAN
+  </text>
+
+  <!-- Official Subtitle / Tagline -->
+  <text x="135" y="98" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#087D70" letter-spacing="0.4">
+    From Community Problems to Student Innovation
+  </text>
+</svg>

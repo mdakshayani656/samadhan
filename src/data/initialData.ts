@@ -1,0 +1,397 @@
+import { SamadhanDatabase, CollegeMatch } from '../types';
+
+export const DEFAULT_COLLEGES: Record<string, CollegeMatch[]> = {
+  Infrastructure: [
+    { name: 'Government Engineering College', distance: '2.3 km away', specialization: 'Civil & Structural Engineering', type: 'Govt. Autonomous' },
+    { name: 'KL University (Deemed)', distance: '3.1 km away', specialization: 'Smart Infrastructure & Robotics Lab', type: 'NAAC A++' },
+    { name: 'VSR College of Engineering', distance: '4.5 km away', specialization: 'Geotechnical & Transportation Center', type: 'Affiliated' }
+  ],
+  Environment: [
+    { name: 'National Institute of Technology', distance: '1.8 km away', specialization: 'Environmental Science & Waste Tech', type: 'Institute of National Importance' },
+    { name: 'Andhra University Center of Eco-Tech', distance: '3.5 km away', specialization: 'Bio-remediation & Waste Systems', type: 'State University' },
+    { name: 'VR Siddhartha Engineering College', distance: '5.2 km away', specialization: 'IoT Clean City Innovation Cell', type: 'Autonomous' }
+  ],
+  'Public Utilities': [
+    { name: 'KL University Smart Grid Wing', distance: '3.1 km away', specialization: 'Renewable & Distributed Power', type: 'NAAC A++' },
+    { name: 'Government Polytechnic Institute', distance: '2.0 km away', specialization: 'Municipal Grid & Sensors', type: 'Govt.' },
+    { name: 'RVR & JC College of Engineering', distance: '6.4 km away', specialization: 'Embedded Sensors & Automation', type: 'Autonomous' }
+  ],
+  Transport: [
+    { name: 'IIT Hyderabad Transit Research Hub', distance: '4.2 km away', specialization: 'Traffic AI & Telematics', type: 'National Institute' },
+    { name: 'Government Engineering College', distance: '2.3 km away', specialization: 'Transportation Engineering', type: 'Govt.' }
+  ],
+  Education: [
+    { name: 'State Educational Tech Institute', distance: '2.7 km away', specialization: 'Digital Pedagogy & Hardware', type: 'Govt.' },
+    { name: 'Acharya Nagarjuna University', distance: '5.0 km away', specialization: 'Community Education & Rural Tech', type: 'State University' }
+  ],
+  Healthcare: [
+    { name: 'AIIMS Community Health & Biotech Unit', distance: '1.5 km away', specialization: 'Biomedical Devices & Public Health', type: 'AIIMS Mangalagiri' },
+    { name: 'Guntur Medical College & Tech Cell', distance: '4.1 km away', specialization: 'Diagnostics & Telemedicine', type: 'Govt. Medical College' }
+  ],
+  Safety: [
+    { name: 'Police Innovation & Tech Cell', distance: '2.8 km away', specialization: 'Surveillance & Emergency Dispatch', type: 'Govt. Dept' },
+    { name: 'KL University Cyber & Physical Security Center', distance: '3.1 km away', specialization: 'IoT Security & Lighting', type: 'NAAC A++' }
+  ],
+  Other: [
+    { name: 'Government Engineering College', distance: '2.3 km away', specialization: 'Multi-disciplinary Innovation Lab', type: 'Govt.' },
+    { name: 'KL University Innovation Incubator', distance: '3.1 km away', specialization: 'Startup & Incubation Cell', type: 'NAAC A++' }
+  ]
+};
+
+export const INITIAL_DATABASE: SamadhanDatabase = {
+  problems: [
+    {
+      id: 'SP-1289',
+      title: 'Road damage near AIIMS Junction',
+      description: 'Severe deep potholes and pavement erosion on the four-lane approach road near AIIMS Mangalagiri junction. Causing severe traffic congestion, vehicle axle damage, and severe risk to patient ambulances during peak hours.',
+      location: 'NH-16 AIIMS Junction, Mangalagiri, Guntur, AP',
+      coordinates: { lat: 16.4384, lng: 80.5654 },
+      category: 'Infrastructure',
+      problemType: 'Road Damage & Potholes',
+      priority: 'High',
+      photo: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1000&q=80',
+      evidence: 'Sufficient',
+      aiDone: true,
+      duplicate: false,
+      aiConfidence: 92,
+      verified: true,
+      governmentRemarks: 'Ground verified by Executive Engineer (PWD Mangalagiri Division). Severe pavement degradation confirmed; high priority due to ambulance emergency corridor.',
+      collegeNotified: true,
+      matchedColleges: DEFAULT_COLLEGES['Infrastructure'],
+      teamFormed: true,
+      teamId: 'TEAM-801',
+      solutionSubmitted: true,
+      solutionId: 'SOL-501',
+      industryReviewed: true,
+      queriesPending: true,
+      prototypeFinalized: false,
+      fundingApproved: false,
+      implemented: false,
+      status: 'Queries Raised by Industry',
+      createdAt: '2026-09-08T09:30:00.000Z',
+      updatedAt: '2026-09-10T11:15:00.000Z',
+      citizenName: 'Ramesh Babu',
+      citizenEmail: 'citizen@demo.com',
+      communityReportCount: 3,
+      isConsolidatedMaster: true,
+      reporterEmails: ['citizen@demo.com', 'priya.k@demo.com', 'suresh.kumar@demo.com'],
+      additionalReports: [
+        {
+          id: 'REP-101',
+          citizenName: 'Priya K.',
+          citizenEmail: 'priya.k@demo.com',
+          timestamp: '2026-09-08T14:20:00.000Z',
+          description: 'Ambulance transit delayed by 20 mins due to 18-inch pothole crater right before the AIIMS hospital flyover.',
+          photo: 'https://images.unsplash.com/photo-1541888946425-d0fbb1861593?auto=format&fit=crop&w=1000&q=80',
+          locationDetails: 'Approach ramp 200m from AIIMS main emergency gate',
+          similarityScore: 94,
+          similarityReason: 'AI duplicate check matched location and keyword overlap with SP-1289. Auto-consolidated.'
+        },
+        {
+          id: 'REP-102',
+          citizenName: 'Suresh Kumar',
+          citizenEmail: 'suresh.kumar@demo.com',
+          timestamp: '2026-09-09T08:45:00.000Z',
+          description: 'Multiple two-wheelers skidded during morning rain on the damaged road surface. Severe gravel erosion.',
+          photo: 'https://images.unsplash.com/photo-1578885136359-16c8bd4d3a8e?auto=format&fit=crop&w=1000&q=80',
+          locationDetails: 'NH-16 AIIMS curve median lane',
+          similarityScore: 91,
+          similarityReason: 'AI duplicate check confirmed same geographic radius (within 150m) and pavement category. Merged into SP-1289.'
+        }
+      ]
+    },
+    {
+      id: 'SP-1290',
+      title: 'Improper waste management in market area',
+      description: 'Open garbage dump near vegetable wholesale yard accumulating over 4 tons daily without segregation. Stagnant organic runoff causing health hazards and foul stench.',
+      location: 'Rythu Bazar, Main Wholesale Market, Vijayawada, AP',
+      coordinates: { lat: 16.5062, lng: 80.6480 },
+      category: 'Environment',
+      problemType: 'Solid Waste Overflow',
+      priority: 'High',
+      photo: 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=1000&q=80',
+      evidence: 'Sufficient',
+      aiDone: true,
+      duplicate: false,
+      aiConfidence: 89,
+      verified: true,
+      governmentRemarks: 'Municipal Health Inspector site inspection verified. Requires decentralized organic compost or bio-methanation innovation.',
+      collegeNotified: true,
+      matchedColleges: DEFAULT_COLLEGES['Environment'],
+      teamFormed: false,
+      solutionSubmitted: false,
+      industryReviewed: false,
+      prototypeFinalized: false,
+      fundingApproved: false,
+      implemented: false,
+      status: 'Nearby Colleges Notified',
+      createdAt: '2026-09-09T08:00:00.000Z',
+      updatedAt: '2026-09-09T14:20:00.000Z',
+      citizenName: 'Sita Lakshmi',
+      citizenEmail: 'citizen@demo.com'
+    },
+    {
+      id: 'SP-1291',
+      title: 'Non-functional street lights along Canal Road',
+      description: 'Over 2.4 km stretch along Krishna Canal has pitch darkness due to faulty junction boxes and cable cuts, creating severe women safety risks after 7 PM.',
+      location: 'Canal Road, Old Mangalagiri, AP',
+      coordinates: { lat: 16.4320, lng: 80.5590 },
+      category: 'Public Utilities',
+      problemType: 'Electrical Grid Outage',
+      priority: 'Medium',
+      photo: 'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=1000&q=80',
+      afterPhoto: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1000&q=80',
+      evidence: 'Sufficient',
+      aiDone: true,
+      duplicate: false,
+      aiConfidence: 94,
+      verified: true,
+      governmentRemarks: 'Verified by Municipal Electrical Division.',
+      collegeNotified: true,
+      matchedColleges: DEFAULT_COLLEGES['Public Utilities'],
+      teamFormed: true,
+      teamId: 'TEAM-772',
+      solutionSubmitted: true,
+      solutionId: 'SOL-490',
+      industryReviewed: true,
+      prototypeFinalized: true,
+      fundingApproved: true,
+      fundingAmount: 320000,
+      implemented: true,
+      solvedAt: '2026-09-07T16:00:00.000Z',
+      status: 'Problem Solved',
+      createdAt: '2026-08-20T10:00:00.000Z',
+      updatedAt: '2026-09-07T16:00:00.000Z',
+      citizenName: 'K. Sunitha Rao',
+      citizenEmail: 'citizen@demo.com'
+    },
+    {
+      id: 'SP-1292',
+      title: 'Water pipeline leakage near Railway Colony',
+      description: 'Major drinking water supply conduit ruptured under culvert #4. Over 15,000 liters of potable water flooding streets every hour while surrounding 400 households face supply cuts.',
+      location: 'Under Culvert #4, Old Railway Colony, Tenali, AP',
+      coordinates: { lat: 16.2430, lng: 80.6400 },
+      category: 'Infrastructure',
+      problemType: 'Water Main Rupture',
+      priority: 'High',
+      photo: 'https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&w=1000&q=80',
+      evidence: 'Sufficient',
+      aiDone: true,
+      duplicate: false,
+      aiConfidence: 96,
+      verified: false,
+      collegeNotified: false,
+      teamFormed: false,
+      solutionSubmitted: false,
+      industryReviewed: false,
+      prototypeFinalized: false,
+      fundingApproved: false,
+      implemented: false,
+      status: 'Sent to Government for Verification',
+      createdAt: '2026-09-10T12:00:00.000Z',
+      updatedAt: '2026-09-10T12:05:00.000Z',
+      citizenName: 'M. Venkat',
+      citizenEmail: 'citizen@demo.com'
+    }
+  ],
+  aiReports: {
+    'SP-1289': {
+      problemId: 'SP-1289',
+      duplicateDetected: false,
+      duplicateProbability: 4,
+      suggestedCategory: 'Infrastructure',
+      detectedProblemType: 'Road Damage & Potholes',
+      severity: 'Critical',
+      priority: 'High',
+      evidenceQuality: 'Sufficient',
+      mediaRelevance: 'Image clearly depicts severe asphalt breakdown, crater potholes, and high vehicle flow.',
+      confidenceScore: 92,
+      recommendation: 'Send to Government for Ground Verification immediately (Ambulance transit corridor).',
+      analyzedAt: '2026-09-08T09:32:00.000Z'
+    },
+    'SP-1290': {
+      problemId: 'SP-1290',
+      duplicateDetected: false,
+      duplicateProbability: 11,
+      suggestedCategory: 'Environment',
+      detectedProblemType: 'Solid Waste Overflow',
+      severity: 'High',
+      priority: 'High',
+      evidenceQuality: 'Sufficient',
+      mediaRelevance: 'Valid geo-tagged visual showing municipal bin overflow and public health hazard.',
+      confidenceScore: 89,
+      recommendation: 'Forward to Government Municipal Department for Verification.',
+      analyzedAt: '2026-09-09T08:02:00.000Z'
+    },
+    'SP-1291': {
+      problemId: 'SP-1291',
+      duplicateDetected: false,
+      duplicateProbability: 2,
+      suggestedCategory: 'Public Utilities',
+      detectedProblemType: 'Electrical Grid Outage',
+      severity: 'Medium',
+      priority: 'Medium',
+      evidenceQuality: 'Sufficient',
+      mediaRelevance: 'Clear photographic evidence of damaged light poles along canal.',
+      confidenceScore: 94,
+      recommendation: 'Send to Municipal Electrical Board.',
+      analyzedAt: '2026-08-20T10:02:00.000Z'
+    },
+    'SP-1292': {
+      problemId: 'SP-1292',
+      duplicateDetected: false,
+      duplicateProbability: 3,
+      suggestedCategory: 'Infrastructure',
+      detectedProblemType: 'Water Main Rupture',
+      severity: 'Critical',
+      priority: 'High',
+      evidenceQuality: 'Sufficient',
+      mediaRelevance: 'High quality imagery demonstrating pressurized drinking water wastage.',
+      confidenceScore: 96,
+      recommendation: 'Send to Government for Verification — Water resource loss critical.',
+      analyzedAt: '2026-09-10T12:02:00.000Z'
+    }
+  },
+  teams: [
+    {
+      id: 'TEAM-801',
+      problemId: 'SP-1289',
+      collegeName: 'KL University (Smart Infrastructure Innovation Lab)',
+      teamName: 'SAMADHAN Innovators',
+      leaderName: 'Aditya Varma (Final Year Civil & Robotics)',
+      members: ['Aditya Varma', 'Pooja Reddy', 'K. Sai Charan', 'Sneha Patel'],
+      department: 'Robotics & Structural Materials Engineering',
+      createdAt: '2026-09-09T10:00:00.000Z'
+    },
+    {
+      id: 'TEAM-772',
+      problemId: 'SP-1291',
+      collegeName: 'Government Polytechnic Institute',
+      teamName: 'UrjaRakshak',
+      leaderName: 'Harish Babu',
+      members: ['Harish Babu', 'Ravi Teja', 'Anusha Devi'],
+      department: 'Electrical & IoT Systems',
+      createdAt: '2026-08-22T11:00:00.000Z'
+    }
+  ],
+  solutions: [
+    {
+      id: 'SOL-501',
+      problemId: 'SP-1289',
+      teamId: 'TEAM-801',
+      teamName: 'SAMADHAN Innovators',
+      collegeName: 'KL University',
+      solutionName: 'Rapid Eco-Bitumen Cold-Patching Robot with Geo-Tagging',
+      description: 'An automated compact motorized asphalt-dispensing unit that uses recycled plastic-infused cold-mix bitumen that cures within 25 minutes without heavy road rollers or blocking traffic.',
+      prototypeDescription: 'Working 1:1 scale semi-autonomous pneumatic applicator cart equipped with compaction roller and microwave pavement binder heating.',
+      technologiesUsed: ['Plastic-Enhanced Cold Bitumen', 'ESP32 IoT Dispenser', 'Pneumatic Compactor', 'Telemetry GPS'],
+      estimatedCost: 285000,
+      expectedImpact: '90% reduction in road repair turnaround time; 70% cheaper than traditional asphalt mobilization.',
+      prototypeImage: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&q=80',
+      prototypeDocUrl: 'https://github.com/samadhan-innovators/rapid-cold-bitumen-v1',
+      targetIndustry: 'Andhra Smart Infrastructure Technologies Ltd.',
+      readinessLevel: 'TRL-5: Working Sub-scale Hardware Validated',
+      billOfMaterials: 'ESP32 IoT Controller (₹1,800), Micro-Compressor (₹24,000), Heated Dispenser Nozzle (₹18,500), Recycled Bitumen Mix 500kg (₹15,000), Structural Frame & Wheels (₹32,000)',
+      version: 1,
+      queries: [
+        {
+          id: 'QRY-101',
+          industryName: 'Andhra Smart Infrastructure Technologies Ltd.',
+          evaluatorName: 'Dr. V. Srinivas, VP of Engineering',
+          queryText: 'Can the bitumen dispenser sustain high-temperature pavement heating during monsoon humidity without nozzle clogging?',
+          requestedModifications: 'Add dual-stage filter and specify thermocouple model for continuous temperature feedback.',
+          status: 'pending',
+          createdAt: '2026-09-10T11:00:00.000Z'
+        }
+      ],
+      submittedAt: '2026-09-10T09:45:00.000Z'
+    },
+    {
+      id: 'SOL-490',
+      problemId: 'SP-1291',
+      teamId: 'TEAM-772',
+      teamName: 'UrjaRakshak',
+      collegeName: 'Government Polytechnic Institute',
+      solutionName: 'LoRaWAN Mesh Solar-Hybrid Smart Canal Illumination',
+      description: 'Retrofitting canal poles with anti-theft solar micro-panels, PIR motion sensors, and automated fault reporting.',
+      prototypeDescription: 'Modular clamp-on light enclosure with battery telemetry.',
+      technologiesUsed: ['LoRaWAN Mesh', 'Solar LiFePO4', 'PIR Sensors', 'Cloud Monitoring'],
+      estimatedCost: 320000,
+      expectedImpact: 'Zero grid burden; 100% canal path illuminated with instant fault alerts.',
+      prototypeImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
+      submittedAt: '2026-08-25T14:30:00.000Z'
+    }
+  ],
+  evaluations: {
+    'SOL-490': {
+      id: 'EVAL-301',
+      solutionId: 'SOL-490',
+      problemId: 'SP-1291',
+      industryName: 'Andhra Smart Infrastructure Pvt. Ltd.',
+      evaluatorName: 'Dr. V. Srinivas, VP of Engineering',
+      technicalFeasibility: 5,
+      scalability: 5,
+      costViability: 4,
+      manufacturability: 5,
+      deploymentFeasibility: 5,
+      expectedImpact: 5,
+      feedback: 'Excellent design with high domestic component availability. Suitable for immediate municipal rollout.',
+      verdict: 'Finalized',
+      finalizedAt: '2026-08-28T16:00:00.000Z'
+    }
+  },
+  funding: {
+    'SP-1291': {
+      problemId: 'SP-1291',
+      solutionId: 'SOL-490',
+      approvedAmount: 320000,
+      disbursedDate: '2026-08-30T10:00:00.000Z',
+      grantType: 'SIH Civic Innovation Implementation Grant',
+      sanctionOfficer: 'Collector & District Magistrate, Guntur',
+      sanctionOrderNumber: 'GO-MS/GNT/2026/089'
+    }
+  },
+  notifications: [
+    {
+      id: 'NOTIF-1',
+      targetRole: 'industry',
+      problemId: 'SP-1289',
+      title: 'New Student Prototype for Evaluation',
+      message: 'Team SAMADHAN Innovators from KL University submitted a working solution for "Road damage near AIIMS Junction".',
+      type: 'info',
+      timestamp: '2026-09-10T09:45:00.000Z',
+      read: false
+    },
+    {
+      id: 'NOTIF-2',
+      targetRole: 'government',
+      problemId: 'SP-1292',
+      title: 'New Civic Problem Pending Ground Verification',
+      message: 'AI has completed initial analysis for "Water pipeline leakage near Railway Colony". Ground verification required.',
+      type: 'alert',
+      timestamp: '2026-09-10T12:05:00.000Z',
+      read: false
+    },
+    {
+      id: 'NOTIF-3',
+      targetRole: 'citizen',
+      targetEmail: 'citizen@demo.com',
+      problemId: 'SP-1291',
+      title: 'Problem Solved & Implemented!',
+      message: '🎉 Your reported problem "Non-functional street lights along Canal Road" has been successfully solved and implemented.',
+      type: 'success',
+      timestamp: '2026-09-07T16:00:00.000Z',
+      read: false
+    },
+    {
+      id: 'NOTIF-4',
+      targetRole: 'college',
+      problemId: 'SP-1290',
+      title: 'New Government-Verified Challenge Available',
+      message: 'Municipal administration verified "Improper waste management in market area". Form a student team to solve.',
+      type: 'info',
+      timestamp: '2026-09-09T14:20:00.000Z',
+      read: false
+    }
+  ]
+};

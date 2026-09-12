@@ -1,0 +1,6 @@
+{
+  "name": "SAMADHAN — समाधान",
+  "description": "From Community Problems to Student Innovation. An SIH prototype connecting citizens, AI, government, colleges, and industry to resolve real-world problems.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
